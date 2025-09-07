@@ -19,7 +19,21 @@
   - [参与作者], **杨嘉伟**, [其他作者]
   - *投稿中*
   - 我作为 **参与者**，主要负责优化 HLS 在任务级调度中的表现。 -->
- 
+
+### 高性能GPU倒排索引与稀疏计算优化
+
+独立研究项目 | 2025.04 - 至今
+
+- **Sparse Bool GPU Kernel for IR System**（计划投稿SIGMOD）：为加速信息检索与推荐系统中的稀疏计算，设计并实现了一套高性能GPU倒排索引库。将倒排链根据元素值的高位进行分块 ，再依据块内元素密度从多种稀疏与稠密格式中选择最优压缩方式进行存储。与主流GPU稀疏计算库cuBool相比，该方案的稀疏计算性能提升约**79%**
+
+###  面向CPU-GPU并行的GNN训练框架设计与优化 
+<!-- Transformer 模型异构硬件推理加速 -->
+
+开放合作研究课题 - 光明实验室 GNN优化加速 | 2025.01 - 至今
+
+- [**HeteroGNN: A Heterogeneous Stage Division Based GNN Training Framework to Maximize CPU-GPU Parallelism**](https://whova.com/embedded/session/hlWY6K3rL7pHvG8Yd1TfjYJVgDEZvOuEPKWGmeuUbIQ%3D/4654604/?widget=primary)（ICME25'）：设计并实现了GNN训练框架HeteroGNN，提出了数据依赖感知的阶段划分策略，将训练过程从粗粒度的两个阶段细化为六个阶段，实现了阶段间的并行
+- HeteroGNN还设计了细粒度的计算划分模式和自适应任务调度器，根据拓扑结构的特性，在CPU和GPU上合理地分配计算任务，有效提升了GPU的利用率 。实验结果表明，HeteroGNN相比于DGL和PyG，实现了**1.3**倍到**2.06**倍的端到端训练加速
+
 ### 国家重点研发项目：全息存储多级长效编码与数据通道
   
 项目编号No. 2018YFA0701800 | 2022.09 - 2024.09
@@ -28,13 +42,6 @@
 
 - **eLDPC: An Elastic HLS-friendly LDPC-Decoder with Dynamical Scheduling**(TCAD在投): 优化HLS在任务级调度中的表现，使用双缓冲区和重构输出缓冲优化译码器中译码单元运行时间不对齐的问题，综合吞吐率较SOTA提升**5×**
 
-###  面向CPU-GPU并行的GNN训练框架设计与优化 
-<!-- Transformer 模型异构硬件推理加速 -->
-
-开放合作研究课题 - 光明实验室 GNN优化加速 | 2025.01 - 至今
-
-- [**HeteroGNN: A Heterogeneous Stage Division Based GNN Training Framework to Maximize CPU-GPU Parallelism**](https://whova.com/embedded/session/hlWY6K3rL7pHvG8Yd1TfjYJVgDEZvOuEPKWGmeuUbIQ%3D/4654604/?widget=primary)（ICME25'）：设计并实现了GNN训练框架HeteroGNN，提出了数据依赖感知的阶段划分策略，将训练过程从粗粒度的两个阶段细化为六个阶段，实现了阶段间的并行。
-- HeteroGNN还设计了细粒度的计算划分模式和自适应任务调度器，根据拓扑结构的特性，在CPU和GPU上合理地分配计算任务，有效提升了GPU的利用率 。实验结果表明，HeteroGNN相比于DGL和PyG，实现了**1.3**倍到**2.06**倍的端到端训练加速
 
 ### 黑色素瘤致癌基因筛选
 
