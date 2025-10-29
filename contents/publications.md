@@ -40,7 +40,7 @@
 
 - [**HEncode: A Highly Modularized and Efficient FPGA QC-LDPC Encoder Using High Level Synthesis**](https://ieeexplore.ieee.org/document/10818010/)（ICCD24'，**第一作者**）: 使用C/C++以及优化高层次综合(HLS)，在FPGA上实现近Tbps级别吞吐率的QC-LDPC编码器，设计实现了3级并行和2级流水的编码计算操作，实现**5.89×**的单位硬件效率提升和**154.5×**的最高编码吞吐率提升，实现了**922.66Gbps**的编码效率
 
-- **eLDPC: An Elastic HLS-friendly LDPC-Decoder with Dynamical Scheduling**(TCAD在投): 优化HLS在任务级调度中的表现，使用双缓冲区和重构输出缓冲优化译码器中译码单元运行时间不对齐的问题，综合吞吐率较SOTA提升**5×**
+- [**eLDPC: An Elastic HLS-friendly LDPC-Decoder with Dynamical Scheduling**](https://ieeexplore.ieee.org/document/11217176)(TCAD CCF-A): 优化HLS在任务级调度中的表现，使用双缓冲区和重构输出缓冲优化译码器中译码单元运行时间不对齐的问题，综合吞吐率较SOTA提升**5×**
 
 
 ### 黑色素瘤致癌基因筛选
